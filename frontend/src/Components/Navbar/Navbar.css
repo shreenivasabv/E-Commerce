@@ -1,0 +1,87 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.nav-logo p{
+    color:black;
+    font-size: 38px;
+    front: weight 600px;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: None;
+    gap: 50px;
+    color: #626262;
+    font-size: 500;
+    font-weight: 500;
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu hr{
+    border: None;
+    width: 80%;
+    height:3px ;
+    border-radius: 10px;
+    background-color: #ff4141;
+}
+
+/* ... keep your navbar, nav-logo, and nav-menu CSS as it is ... */
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+/* THE WRAPPER: This holds the icon and the dot together */
+.nav-cart-wrapper {
+    position: relative; /* This is the anchor */
+    display: flex;
+    align-items: center;
+}
+
+.nav-cart-wrapper img {
+    width: 35px; /* Adjust based on your icon size */
+    height: auto;
+}
+
+/* THE RED DOT: No more negative margins! */
+.nav-cart-count {
+    position: absolute; /* Relative to nav-cart-wrapper */
+    top: -5px;          /* Moves it slightly above the icon */
+    right: -10px;       /* Moves it slightly to the right of the icon */
+    
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    background: red;
+    color: white;
+    
+    /* Professional touch: a border makes it look better against the icon */
+    border: 2px solid white; 
+}
