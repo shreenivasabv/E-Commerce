@@ -1,22 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
-
-
   return (
-    <div class ="item">
-      <img src={props.image} alt="item image"/>
-      <p>{props.name}</p>
-    <div className='item-prices'>
-        <div className='item-price-new'>
-            ${props.new_Price}
-        </div>   
-        <div className='item-price-old'>
-            ${props.old_Price}
-        </div>   
-    </div>
-    </div>
-  )
-}
+    <div className="item">
+      <Link to={`/product/${props.id}`}>
+        <img src={props.image} alt={props.name} />
+      </Link>
 
-export default Item
+      <p>{props.name}</p>
+
+      <div className="item-prices">
+        <div className="item-price-new">${props.new_Price}</div>
+        <div className="item-price-old">${props.old_Price}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Item;
