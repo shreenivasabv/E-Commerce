@@ -1,0 +1,23 @@
+.newsletter {
+  width: 65%;
+  max-width: 900px;
+
+  margin: 120px auto;   /* <-- adds space above & below */
+  padding: 40px 50px;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+}
+.newsletter-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
