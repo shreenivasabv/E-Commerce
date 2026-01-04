@@ -1,87 +1,110 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 1px 3px -2px black;
+/* MAIN NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px -2px black;
+  background: white;
 }
 
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+/* LOGO + NAME */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.nav-logo p{
-    color:black;
-    font-size: 38px;
-    front: weight 600px;
-}
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: None;
-    gap: 50px;
-    color: #626262;
-    font-size: 500;
-    font-weight: 500;
+.nav-logo img {
+  width: 45px;
 }
 
-.nav-menu li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    cursor: pointer;
+.nav-logo p {
+  color: black;
+  font-size: 38px;
+  font-weight: 600;
 }
 
-.nav-menu hr{
-    border: None;
-    width: 80%;
-    height:3px ;
-    border-radius: 10px;
-    background-color: #ff4141;
+/* MENU LINKS */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-/* ... keep your navbar, nav-logo, and nav-menu CSS as it is ... */
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
 
+.nav-menu li:hover {
+  color: black;
+}
+
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #ff4141;
+}
+
+/* LOGIN + CART SECTION */
 .nav-login-cart {
-    display: flex;
-    align-items: center;
-    gap: 45px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
 }
 
-/* THE WRAPPER: This holds the icon and the dot together */
+.nav-login-cart button {
+  width: 90px;
+  padding: 8px 0;
+  border-radius: 20px;
+  border: 1px solid #7a7a7a;
+  background: white;
+  color: #515151;
+  cursor: pointer;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+/* CART WRAPPER (ICON + DOT) */
 .nav-cart-wrapper {
-    position: relative; /* This is the anchor */
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-cart-wrapper img {
-    width: 35px; /* Adjust based on your icon size */
-    height: auto;
+  width: 35px;
 }
 
-/* THE RED DOT: No more negative margins! */
+/* CART ITEM COUNT DOT */
 .nav-cart-count {
-    position: absolute; /* Relative to nav-cart-wrapper */
-    top: -5px;          /* Moves it slightly above the icon */
-    right: -10px;       /* Moves it slightly to the right of the icon */
-    
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 50%;
-    font-size: 12px;
-    font-weight: 600;
-    background: red;
-    color: white;
-    
-    /* Professional touch: a border makes it look better against the icon */
-    border: 2px solid white; 
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+
+  background: red;
+  color: white;
+  border: 2px solid white;
 }
