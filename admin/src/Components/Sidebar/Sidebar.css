@@ -1,0 +1,29 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid rgb(230, 230, 230);
+  padding-top: 20px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.sidebar-item img {
+  width: 26px;
+}
+
+.sidebar-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar-item:hover {
+  background: #f4f4f4;
+}
