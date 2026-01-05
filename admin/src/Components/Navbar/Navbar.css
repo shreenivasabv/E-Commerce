@@ -2,37 +2,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 28px;
+  height: 72px;
+  padding: 0 32px;
   background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
 }
 
-/* LEFT AREA */
+/* LEFT SIDE */
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 }
 
 .nav-logo {
-  width: 60px;
-  height: 60px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 
 .nav-text h2 {
   margin: 0;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
+  letter-spacing: 0.4px;
 }
 
 .nav-text p {
   margin: 0;
-  font-size: 15px;
-  color: #b44d4d;
+  margin-top: 2px;
+  font-size: 13px;
+  color: #c05b5b;
+  font-weight: 500;
 }
 
-/* RIGHT AREA */
+/* RIGHT SIDE */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -40,14 +45,15 @@
 }
 
 .nav-profile {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .dropdown {
   font-size: 18px;
-  color: #666;
+  color: #777;
   cursor: pointer;
+  user-select: none;
 }

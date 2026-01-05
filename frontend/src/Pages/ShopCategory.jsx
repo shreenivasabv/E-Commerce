@@ -6,6 +6,9 @@ import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
+  console.log("Category page:", props.category);
+console.log("DB categories:", all_product.map(p => p.category));
+
 
   return (
     <div className="shop-catedory">

@@ -1,9 +1,13 @@
-.admin{
-    display: flex;
+.admin {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fafafa;
 }
 
-@media(max-width:800px){
-    .admin{
-        flex-direction: column;
-    }
+/* Sidebar + content stacking on small screens */
+@media (max-width: 800px) {
+  .admin {
+    flex-direction: column;
+  }
 }
