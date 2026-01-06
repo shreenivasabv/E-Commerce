@@ -40,7 +40,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// serve files
+// serve images
 app.use("/uploads/images", express.static(imageDir));
 
 
@@ -68,16 +68,15 @@ app.post("/addproduct", upload.single("product"), async (req, res) => {
     const product = new Product({
       id,
       name: req.body.name,
-      category: req.body.category,
-      new_Price: req.body.new_Price,
-      old_Price: req.body.old_Price,
+      category: req.body.category.toLowerCase(),
+      new_Price: Number(req.body.new_price),
+      old_Price: Number(req.body.old_price),
       image: `http://localhost:${port}/uploads/images/${req.file.filename}`,
     });
 
     await product.save();
-    console.log("Product added:", product);
-
     res.json({ success: true, product });
+
   } catch (err) {
     console.log(err);
     res.status(500).json({ success: false, error: err.message });
@@ -88,8 +87,6 @@ app.post("/addproduct", upload.single("product"), async (req, res) => {
 // ---------------- REMOVE PRODUCT ----------------
 app.post("/removeproduct", async (req, res) => {
   await Product.findOneAndDelete({ id: req.body.id });
-  console.log("Product removed:", req.body.id);
-
   res.json({ success: true });
 });
 
