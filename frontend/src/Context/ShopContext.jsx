@@ -92,3 +92,5 @@ const ShopContextProvider = (props) => {
 };
 
 export default ShopContextProvider;
+
+//everything will fine
